@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/botones" /> <!-- Color de fondo de la forma -->
+    <corners android:radius="16dp" /> <!-- Radio de las esquinas redondeadas -->
+    <stroke
+        android:width="2dp"
+        android:color="#000000" /> <!-- Borde de la forma -->
+    <padding
+        android:bottom="10dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" /> <!-- Espaciado interno de la forma -->
+</shape>
