@@ -6,11 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pantalla5">
-
-
-
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="400dp"
@@ -159,12 +154,14 @@
         </LinearLayout>
 
     </ScrollView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="691dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
         app:cardBackgroundColor="@color/botones"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
