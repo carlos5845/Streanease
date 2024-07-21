@@ -55,7 +55,7 @@
         android:layout_marginTop="210dp"
         android:autofillHints="sx"
         android:ems="10"
-        android:hint="@string/correo_electronico"
+        android:hint="correo electronico"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +85,7 @@
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:text="@string/inicia_sesion"
+        android:fontFamily="@font/roboto_bold"
         app:layout_constraintStart_toStartOf="@+id/backgroundImage"
         app:layout_constraintTop_toBottomOf="@+id/editTextText"
         tools:ignore="MissingConstraints" />

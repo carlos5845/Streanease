@@ -1,9 +1,11 @@
 package com.miaplicaion.mycard
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +20,7 @@ class pantalla5 : AppCompatActivity() {
 
     private lateinit var informacionLayout: LinearLayout
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,6 +31,21 @@ class pantalla5 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val principal = findViewById<ImageView>(R.id.principal)
+        principal.setOnClickListener {
+            val intent = Intent(this, pantalla5::class.java)
+            startActivity(intent)
+        }
+        val confi = findViewById<ImageView>(R.id.confi)
+        confi.setOnClickListener {
+            val intent = Intent(this, pantalla8::class.java)
+            startActivity(intent)
+        }
+        val notitif = findViewById<ImageView>(R.id.notiti)
+        notitif.setOnClickListener {
+            val intent = Intent(this, pantalla7::class.java)
+            startActivity(intent)
         }
 
         // Encuentra el CardView por su ID
@@ -68,11 +86,11 @@ class pantalla5 : AppCompatActivity() {
         val cardView = inflater.inflate(R.layout.item_card, informacionLayout, false)
 
         // Configurar los datos de la tarjeta en el layout inflado
-        cardView.findViewById<TextView>(R.id.textViewAmount).text = " ${card.amount}"
         cardView.findViewById<TextView>(R.id.textViewName).text = " ${card.name}"
-        cardView.findViewById<TextView>(R.id.textViewDescription).text = "Description: ${card.description}"
-        cardView.findViewById<TextView>(R.id.textViewDueDate).text = "Due Date: ${card.dueDate}"
-        cardView.findViewById<TextView>(R.id.textViewPaymentMethod).text = "Payment Method: ${card.paymentMethod}"
+        cardView.findViewById<TextView>(R.id.textViewAmount).text = " ${card.amount}.00"
+        cardView.findViewById<TextView>(R.id.textViewDescription).text = "Descripcion: ${card.description}"
+        cardView.findViewById<TextView>(R.id.textViewDueDate).text = "Fecha de Vencimiento: ${card.dueDate}"
+        cardView.findViewById<TextView>(R.id.textViewPaymentMethod).text = "Metodo de Pago: ${card.paymentMethod}"
 
         val extraInfoLayout = cardView.findViewById<LinearLayout>(R.id.extraInfoLayout)
 

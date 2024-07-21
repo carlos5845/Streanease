@@ -178,33 +178,40 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/principal"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:contentDescription="@string/q"
+                android:contentDescription="@string/home"
                 android:src="@drawable/_home"
                 app:tint="@color/AppBar"
                 tools:layout_editor_absoluteX="3dp"
                 tools:layout_editor_absoluteY="791dp" />
 
             <ImageView
+                android:id="@+id/prox"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/proximos"
                 android:src="@drawable/arrow"
                 app:tint="@color/AppBar"
                 tools:layout_editor_absoluteX="3dp"
                 tools:layout_editor_absoluteY="791dp" />
 
             <ImageView
+                android:id="@+id/segui"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/seguimiento"
                 android:src="@drawable/full"
                 app:tint="@color/AppBar"
                 tools:layout_editor_absoluteX="3dp"
                 tools:layout_editor_absoluteY="791dp" />
 
             <ImageView
+                android:id="@+id/confi"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/mas"
                 android:src="@drawable/suspensivos"
                 app:tint="@color/AppBar"
                 tools:layout_editor_absoluteX="3dp"

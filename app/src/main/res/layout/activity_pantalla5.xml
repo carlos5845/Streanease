@@ -31,6 +31,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/principal"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/home"
@@ -40,6 +41,7 @@
                 tools:layout_editor_absoluteY="791dp" />
 
             <ImageView
+                android:id="@+id/prox"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/proximos"
@@ -49,6 +51,7 @@
                 tools:layout_editor_absoluteY="791dp" />
 
             <ImageView
+                android:id="@+id/segui"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/seguimiento"
@@ -58,6 +61,7 @@
                 tools:layout_editor_absoluteY="791dp" />
 
             <ImageView
+                android:id="@+id/confi"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/mas"
@@ -119,6 +123,7 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/notiti"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/icon_description"

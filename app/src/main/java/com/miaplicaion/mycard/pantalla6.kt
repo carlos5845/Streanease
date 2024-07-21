@@ -36,6 +36,7 @@ class pantalla6 : AppCompatActivity() {
             insets
         }
 
+
         // Obtener referencias a los elementos del layout
         editTextFecha = findViewById(R.id.editTextFecha)
         calendarIcon = findViewById(R.id.calendarIcon)
