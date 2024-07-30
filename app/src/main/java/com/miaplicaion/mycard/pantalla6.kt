@@ -23,6 +23,8 @@ class pantalla6 : AppCompatActivity() {
     private lateinit var editTextFecha: EditText
     private lateinit var editTextMetodoPago: EditText
     private lateinit var calendarIcon: ImageView
+    private lateinit var buttonGuardar: AppCompatButton
+    private lateinit var buttonNavegarPantalla5: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,38 +38,15 @@ class pantalla6 : AppCompatActivity() {
             insets
         }
 
-
         // Obtener referencias a los elementos del layout
         editTextFecha = findViewById(R.id.editTextFecha)
         calendarIcon = findViewById(R.id.calendarIcon)
-
-        // Definir el listener para mostrar el DatePickerDialog
-        val dateClick = View.OnClickListener {
-            // Obtener la fecha actual
-            val calendar = Calendar.getInstance()
-            val year = calendar.get(Calendar.YEAR)
-            val month = calendar.get(Calendar.MONTH)
-            val day = calendar.get(Calendar.DAY_OF_MONTH)
-
-            // Mostrar DatePickerDialog
-            val datePickerDialog = DatePickerDialog(
-                this,
-                { _, year, monthOfYear, dayOfMonth ->
-                    val selectedDate = "$dayOfMonth/${monthOfYear + 1}/$year"
-                    editTextFecha.setText(selectedDate)
-                },
-                year, month, day
-            )
-            datePickerDialog.show()
-        }
-
-        // Asignar el listener tanto al EditText como al ImageView
-        editTextFecha.setOnClickListener(dateClick)
-        calendarIcon.setOnClickListener(dateClick)
-
-        // Obtener referencias a los elementos del layout
-        editTextFecha = findViewById(R.id.editTextFecha)
-        calendarIcon = findViewById(R.id.calendarIcon)
+        editTextAmount = findViewById(R.id.editTextAmount)
+        editTextNombre = findViewById(R.id.editTextNombre)
+        editTextDescripcion = findViewById(R.id.editTextDescripcion)
+        editTextMetodoPago = findViewById(R.id.editTextMetodoPago)
+        buttonGuardar = findViewById(R.id.botonguardar)
+        buttonNavegarPantalla5 = findViewById(R.id.principal)
 
         // Definir el listener para mostrar el DatePickerDialog
         val dateClickListener = View.OnClickListener {
@@ -93,19 +72,15 @@ class pantalla6 : AppCompatActivity() {
         editTextFecha.setOnClickListener(dateClickListener)
         calendarIcon.setOnClickListener(dateClickListener)
 
-
-        // Inicializar vistas
-        editTextAmount = findViewById(R.id.editTextAmount)
-        editTextNombre = findViewById(R.id.editTextNombre)
-        editTextDescripcion = findViewById(R.id.editTextDescripcion)
-        editTextFecha = findViewById(R.id.editTextFecha)
-        editTextMetodoPago = findViewById(R.id.editTextMetodoPago)
-        calendarIcon = findViewById(R.id.calendarIcon)
-
         // Configurar el botón de guardar
-        val buttonGuardar: AppCompatButton = findViewById(R.id.botonguardar)
         buttonGuardar.setOnClickListener {
             saveCard()
+        }
+
+        // Configurar el botón de navegación a pantalla 5
+        buttonNavegarPantalla5.setOnClickListener {
+            val intent = Intent(this, pantalla5::class.java)
+            startActivity(intent)
         }
     }
 
