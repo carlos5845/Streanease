@@ -189,5 +189,15 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="No hay notificaciones"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

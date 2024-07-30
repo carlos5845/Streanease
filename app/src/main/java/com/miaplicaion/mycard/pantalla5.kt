@@ -1,10 +1,12 @@
 package com.miaplicaion.mycard
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -32,6 +34,7 @@ class pantalla5 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val principal = findViewById<ImageView>(R.id.principal)
         principal.setOnClickListener {
             val intent = Intent(this, pantalla5::class.java)
@@ -53,7 +56,6 @@ class pantalla5 : AppCompatActivity() {
 
         // Configura el OnClickListener
         cardView3.setOnClickListener {
-            // Crea un Intent para navegar a pantalla6
             val intent = Intent(this, pantalla6::class.java)
             startActivity(intent)
         }
@@ -68,6 +70,17 @@ class pantalla5 : AppCompatActivity() {
 
         // Mostrar todas las tarjetas
         displayAllCards()
+
+        // Configurar los OnClickListener para los botones segui y prox
+        val seguiButton = findViewById<ImageView>(R.id.segui)
+        seguiButton.setOnClickListener {
+            showMessage("Usted no tiene nada que compartir")
+        }
+
+        val proxButton = findViewById<ImageView>(R.id.prox)
+        proxButton.setOnClickListener {
+            showMessage("Usted no tiene nada que compartir")
+        }
     }
 
     private fun displayAllCards() {
@@ -105,5 +118,26 @@ class pantalla5 : AppCompatActivity() {
 
         // Agregar el nuevo cardView al LinearLayout dentro del ScrollView
         informacionLayout.addView(cardView)
+    }
+
+    private fun showMessage(message: String) {
+        // Inflar el layout del mensaje
+        val inflater = LayoutInflater.from(this)
+        val view = inflater.inflate(R.layout.dialog_message, null)
+
+        // Configurar el mensaje y el botón de cerrar
+        val messageTextView = view.findViewById<TextView>(R.id.messageTextView)
+        messageTextView.text = message
+
+        val closeButton = view.findViewById<Button>(R.id.closeButton)
+        val dialog = AlertDialog.Builder(this)
+            .setView(view)
+            .create()
+
+        closeButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 }
