@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258690315013",
+    "project_id": "formulario-616d6",
+    "storage_bucket": "formulario-616d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258690315013:android:f37bf4d70ee66d0add3d6c",
+        "android_client_info": {
+          "package_name": "com.miaplicaion.mycard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwwxSah4UHlQS80-tz9wkwig7k84Vaztk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
