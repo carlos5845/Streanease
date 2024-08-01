@@ -51,4 +51,7 @@
     <string name="mas">mas</string>
     <string name="icon_description">notifiaciones</string>
     <string name="Guardar">guardar</string>
+    <string name="tema_del_dispositivo">Tema del dispositivo</string>
+    <string name="recarga">Recarga</string>
+    <string name="idioma">Idioma</string>
 </resources>

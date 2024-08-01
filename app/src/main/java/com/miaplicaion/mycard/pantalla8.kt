@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.ComponentActivity
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat
 class pantalla8 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_pantalla8)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -39,6 +36,11 @@ class pantalla8 : AppCompatActivity() {
         val seguiButton = findViewById<ImageView>(R.id.segui)
         seguiButton.setOnClickListener {
             showMessageDialog("Usted no tiene nada que compartir.")
+        }
+
+        val expandOptionsButton = findViewById<ImageView>(R.id.expand_options)
+        expandOptionsButton.setOnClickListener {
+            showMessageDialog("aqui no hay nada")
         }
     }
 
