@@ -76,6 +76,12 @@ class pantalla6 : AppCompatActivity() {
             datePickerDialog.show()
         }
 
+        val confi = findViewById<ImageView>(R.id.confi)
+        confi.setOnClickListener {
+            val intent = Intent(this, pantalla8::class.java)
+            startActivity(intent)
+        }
+
         // Asignar el listener tanto al EditText como al ImageView
         editTextFecha.setOnClickListener(dateClickListener)
         calendarIcon.setOnClickListener(dateClickListener)
