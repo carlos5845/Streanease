@@ -42,6 +42,21 @@ class pantalla8 : AppCompatActivity() {
         expandOptionsButton.setOnClickListener {
             showMessageDialog("aqui no hay nada")
         }
+
+        val expandOptionsButton2 = findViewById<ImageView>(R.id.expand_options2)
+        expandOptionsButton2.setOnClickListener {
+            showMessageDialog("aqui no hay nada")
+        }
+
+        val expandOptionsButton3 = findViewById<ImageView>(R.id.expand_options3)
+        expandOptionsButton3.setOnClickListener {
+            showMessageDialog("aqui no hay nada")
+        }
+
+        val expandOptionsButton4 = findViewById<ImageView>(R.id.expand_options4)
+        expandOptionsButton4.setOnClickListener {
+            showMessageDialog("aqui no hay nada")
+        }
     }
 
     private fun showMessageDialog(message: String) {
