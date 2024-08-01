@@ -3,10 +3,14 @@ package com.miaplicaion.mycard
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
@@ -25,6 +29,8 @@ class pantalla6 : AppCompatActivity() {
     private lateinit var calendarIcon: ImageView
     private lateinit var buttonGuardar: AppCompatButton
     private lateinit var buttonNavegarPantalla5: ImageView
+    private lateinit var buttonSegui: ImageView
+    private lateinit var buttonProx: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +53,8 @@ class pantalla6 : AppCompatActivity() {
         editTextMetodoPago = findViewById(R.id.editTextMetodoPago)
         buttonGuardar = findViewById(R.id.botonguardar)
         buttonNavegarPantalla5 = findViewById(R.id.principal)
+        buttonSegui = findViewById(R.id.segui)
+        buttonProx = findViewById(R.id.prox)
 
         // Definir el listener para mostrar el DatePickerDialog
         val dateClickListener = View.OnClickListener {
@@ -82,6 +90,15 @@ class pantalla6 : AppCompatActivity() {
             val intent = Intent(this, pantalla5::class.java)
             startActivity(intent)
         }
+
+        // Configurar los botones segui y prox para mostrar el mensaje
+        buttonSegui.setOnClickListener {
+            showMessageDialog("Usted no tiene nada que compartir.")
+        }
+
+        buttonProx.setOnClickListener {
+            showMessageDialog("Usted no tiene nada que compartir.")
+        }
     }
 
     private fun saveCard() {
@@ -99,5 +116,23 @@ class pantalla6 : AppCompatActivity() {
         // Crear un Intent para navegar de vuelta a pantalla5
         val intent = Intent(this, pantalla5::class.java)
         startActivity(intent)
+    }
+
+    private fun showMessageDialog(message: String) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_message, null)
+        val messageTextView = dialogView.findViewById<TextView>(R.id.messageTextView)
+        val closeButton = dialogView.findViewById<Button>(R.id.closeButton)
+
+        messageTextView.text = message
+
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        closeButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 }
