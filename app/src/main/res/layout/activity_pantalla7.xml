@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:padding="10dp"
-            android:text="Notificaciones"
+            android:text="adbjadhashd"
             android:textSize="24sp" />
     </androidx.cardview.widget.CardView>
 
