@@ -4,10 +4,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="botones">#0D6EFD</color>
     <color name="AppBar">#0D6EFD</color>
-    <color name="color1">#FF0000</color> <!-- Rojo -->
-    <color name="color2">#00FF00</color> <!-- Verde -->
-    <color name="color3">#0000FF</color> <!-- Azul -->
-    <!-- Agrega más colores aquí -->
+    <color name="color1">#FF0000</color>
+    <color name="color2">#00FF00</color>
+    <color name="color3">#0000FF</color>
+    <color name="color_fondo">#56b6c2</color>
+    <color name="color_boton_fondo">#2e87ad</color>
+
+
+
+
 
 
 </resources>

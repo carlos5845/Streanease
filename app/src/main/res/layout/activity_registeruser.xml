@@ -14,6 +14,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="Registrate!!!"
         android:textSize="50sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/backgroundImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,18 +44,20 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backgroundImage">
+        app:layout_constraintTop_toTopOf="@+id/backgroundImage"
+        app:layout_constraintVertical_bias="0.345">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
             app:endIconDrawable="@drawable/user">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -69,10 +72,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
             app:endIconDrawable="@drawable/email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -87,10 +90,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
             app:endIconDrawable="@drawable/password">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -105,11 +108,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
-            >
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -122,11 +124,11 @@
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/material_dynamic_primary50"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/color_boton_fondo"
             android:text="Registrar"
-            android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:layout_marginTop="20dp"/>
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 
